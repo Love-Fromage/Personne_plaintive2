@@ -34,6 +34,7 @@ public class App {
         }
     }
     public static void FirstName(){
-        System.out.println("firstname");
+        System.out.println("So now that we've established your sex, \nlet's proceed and ask you your first name.");
+        System.out.print("First name:");
     }
 }
