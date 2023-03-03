@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class App {
-    private static Person  personne = new Person(0);
+    private static Person  personne = new Person(0, "jack");
     public static void main(String[] args) throws Exception {
         Start();
     }
@@ -28,10 +28,7 @@ public class App {
         
         System.out.print("Your choice:");
         Scanner scanner = new Scanner(System.in);
-        int userConfirm = scanner.nextInt();
-        if(userConfirm==0){
-            FirstName();
-        }
+        // int userConfirm = scanner.nextInt();
     }
     public static void FirstName(){
         System.out.println("So now that we've established your sex, \nlet's proceed and ask you your first name.");
