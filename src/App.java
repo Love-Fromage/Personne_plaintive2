@@ -23,12 +23,10 @@ public class App {
     public static void VerifySex(String choix) {
        System.out.println("Vous avez choisi "+ choix + " ?"); 
         System.out.println("[0] Yes.");
-        System.out.println("[1] Yes.");
-        System.out.println(personne.sex);
-        
+        System.out.println("[1] Yes."); 
         System.out.print("Your choice:");
         Scanner scanner = new Scanner(System.in);
-        // int userConfirm = scanner.nextInt();
+	int userConfirm = scanner.nextInt();
     }
     public static void FirstName(){
         System.out.println("So now that we've established your sex, \nlet's proceed and ask you your first name.");
