@@ -1,6 +1,7 @@
 import java.util.Scanner;
 public class App {
     private static Person  personne = new Person(0, "jack");
+    private static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) throws Exception {
         Start();
     }
@@ -25,12 +26,15 @@ public class App {
         System.out.println("[0] Yes.");
         System.out.println("[1] Yes."); 
         System.out.print("Your choice:");
-        Scanner scanner = new Scanner(System.in);
-	int userConfirm = scanner.nextInt();
+	    int userConfirm = scanner.nextInt();
+        if(userConfirm == 0){
+            FirstName();
+        }
     }
     public static void FirstName(){
         System.out.println("So now that we've established your sex, \nlet's proceed and ask you your first name.");
         System.out.print("First name:");
-        // just a comment for a commit 22
+        String userFirstName = scanner.nextLine();
+        System.out.println("Hello "+userFirstName);
     }
 }
