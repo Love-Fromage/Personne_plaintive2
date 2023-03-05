@@ -11,6 +11,7 @@ public class App {
         String lastName = ChooseLastName(scanner);
         String complaint = ChooseComplaint(scanner);
         System.out.println(sex + " " + firstName + " " + lastName + " " + complaint); // a enlever
+        GeneratePerson(sex, firstName, lastName, complaint);
 
         scanner.close();
     }
@@ -84,5 +85,20 @@ public class App {
                 "The overall design of this ad is so bland and unappealing, I wouldn't even consider buying the product.",
         };
         return complaints[complaintChosen - 1];
+    }
+
+    public static void GeneratePerson(String sex, String firstName, String lastName, String complaint) {
+        Person person = new Person(sex, firstName, lastName, complaint);
+
+        if (person.lastName == null) {
+            person.lastName = "";
+        } else {
+            person.firstName += " ";
+        }
+
+        System.out.println("Given the prior prompt, this is you new complaint generated card:");
+        System.out.println(person.firstName + person.lastName + ", " + person.sex + " said :");
+        System.out.println(person.complaint);
+
     }
 }
