@@ -6,5 +6,5 @@ public class Person {
       //   sex = sexPossible[sexChoice];
         firstName = fName;
    }
-   
+
 };

@@ -9,8 +9,8 @@ public class App {
         String sex = ChooseSex(scanner);
         String firstName = ChooseFirstName(scanner);
         System.out.println(sex + " " + firstName); // a enlever
-        boolean wantLastName = askLastName(scanner);
-        System.out.println(sex + " " + firstName + " " + wantLastName); // a enlever
+        String lastName = ChooseLastName(scanner);
+        System.out.println(sex + " " + firstName + " " + lastName); // a enlever
 
         scanner.close();
     }
@@ -41,7 +41,7 @@ public class App {
         return scanner.nextLine();
     }
 
-    public static boolean askLastName(Scanner scanner) {
+    public static String ChooseLastName(Scanner scanner) {
         System.out.println("Would you like to choose a last name?");
         System.out.println("[0] : Yes");
         System.out.println("[1] : No");
@@ -49,19 +49,11 @@ public class App {
         int selection = scanner.nextInt();
         scanner.nextLine();
 
-        switch (selection) {
-            case 0:
-                return true;
-            case 1:
-                return false;
-            default:
-                System.out.println("Please choose between the two values");
-                return askLastName(scanner);
+        if (selection == 0) {
+          System.out.print("Please choose a last name : ");
+          return scanner.nextLine();
         }
-    }
 
-    public static String ChooseLastName(Scanner scanner) {
-        System.out.print("Please enter a last name : ");
-        return scanner.nextLine();
+        return null;
     }
 }
