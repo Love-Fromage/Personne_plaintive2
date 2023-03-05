@@ -8,6 +8,7 @@ public class App {
         System.out.println("Welcome to the complainer generator");
         String sex = ChooseSex(scanner);
         String firstName = ChooseFirstName(scanner);
+        System.out.println(sex + " " + firstName);
 
         scanner.close();
     }
@@ -23,7 +24,7 @@ public class App {
 
         switch (selection) {
             case 0:
-                return "Male";
+                return "Male 😀";
             case 1:
                 return "Female";
             default:
