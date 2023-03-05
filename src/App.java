@@ -99,8 +99,8 @@ public class App {
         System.out.print("\033[H\033[2J");
         System.out.flush();
 
-        System.out.println("Given the prior prompt, this is your new complaint generated card:");
+        System.out.println("Given the prior prompt, this is your new complaint generated card:\n");
         System.out.println(person.firstName + person.lastName + ", " + person.sex + " said :");
-        System.out.println(person.complaint);
+        System.out.println(person.complaint + "\n\n");
     }
 }
