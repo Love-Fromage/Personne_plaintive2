@@ -10,7 +10,6 @@ public class App {
         String firstName = ChooseFirstName(scanner);
         String lastName = ChooseLastName(scanner);
         String complaint = ChooseComplaint(scanner);
-        System.out.println(sex + " " + firstName + " " + lastName + " " + complaint); // a enlever
         GeneratePerson(sex, firstName, lastName, complaint);
 
         scanner.close();
@@ -96,9 +95,12 @@ public class App {
             person.firstName += " ";
         }
 
-        System.out.println("Given the prior prompt, this is you new complaint generated card:");
+        // on clear la console pour faire un truc plus clean dans le programme
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+
+        System.out.println("Given the prior prompt, this is your new complaint generated card:");
         System.out.println(person.firstName + person.lastName + ", " + person.sex + " said :");
         System.out.println(person.complaint);
-
     }
 }
