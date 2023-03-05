@@ -2,13 +2,13 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-
+        // initialiasation d'un scanner pour lire des inputs dans le programme
         Scanner scanner = new Scanner(System.in);
+
         System.out.println("Welcome to the complainer generator");
         String sex = ChooseSex(scanner);
-        System.out.println("sex is : " + sex);
         String firstName = ChooseFirstName(scanner);
-        System.out.println("Chosen name : " + firstName);
+
         scanner.close();
     }
 
@@ -36,5 +36,4 @@ public class App {
         System.out.print("Please choose a first name : ");
         return scanner.nextLine();
     }
-
 }
