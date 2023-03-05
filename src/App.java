@@ -1,53 +1,40 @@
 import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) {
-        
+
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the complainer generator");
-        String userSex = ChooseSex();
-        System.out.println("sex is : "+userSex);
+        String sex = ChooseSex(scanner);
+        System.out.println("sex is : " + sex);
+        String firstName = ChooseFirstName(scanner);
+        System.out.println("Chosen name : " + firstName);
+        scanner.close();
     }
 
-    public static String ChooseSex(){
+    public static String ChooseSex(Scanner scanner) {
         System.out.println("To start, please choose a Sex \n");
         System.out.println("[0]: Male");
         System.out.println("[1]: Female");
         System.out.print("Your choice:");
 
-        Scanner scanner = new Scanner(System.in);
         int selection = scanner.nextInt();
-        scanner.close();
-        
-        switch(selection){
+        scanner.nextLine(); // ici on viens "annuler le enter Enter sinon ca bug dans le choose name tantot"
+
+        switch (selection) {
             case 0:
                 return "Male";
             case 1:
                 return "Female";
             default:
-                System.out.println("please choose between the two values");
-                return ChooseSex();       
+                System.out.println("Please choose between the two values");
+                return ChooseSex(scanner);
         }
     }
 
-    // public static void VerifySex(String choix) {
-    //    System.out.println("Vous avez choisi "+ choix + " ?"); 
-    //     System.out.println("[0] Yes.");
-    //     System.out.println("[1] No."); 
-    //     System.out.print("Your choice:");
-    //     Scanner scanner = new Scanner(System.in);
-	//     int userConfirm = scanner.nextInt();
-    //     if(userConfirm == 0){
-    //         FirstName();
-    //     }
-    //     if(userConfirm==1){
-    //         ChooseSex();
-    //     }
-    // }
-    // public static void FirstName(){
-    //     System.out.println("So now that we've established your sex, \nlet's proceed and ask you your first name.");
-    //     System.out.print("First name:");
-    //     Scanner scanner = new Scanner(System.in);
-    //     String userFirstName = scanner.nextLine();
-    //     personne.firstName = userFirstName;
-    //     System.out.println("Hello "+personne.firstName);
-    // }
+    public static String ChooseFirstName(Scanner scanner) {
+        System.out.print("Please choose a first name : ");
+        return scanner.nextLine();
+    }
+
 }
