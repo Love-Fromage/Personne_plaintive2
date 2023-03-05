@@ -2,9 +2,13 @@ public class Person {
    String sex;
    String firstName;
    String lastName;
-   public Person(int sexChoice, String fName) {
-      //   sex = sexPossible[sexChoice];
-        firstName = fName;
+   String complaint;
+
+   public Person(String sexChoice, String fName, String lName, String complaintChosen) {
+      sex = sexChoice;
+      firstName = fName;
+      lastName = lName;
+      complaint = complaintChosen;
    }
 
 };
