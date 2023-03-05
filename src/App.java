@@ -8,9 +8,10 @@ public class App {
         System.out.println("Welcome to the complainer generator");
         String sex = ChooseSex(scanner);
         String firstName = ChooseFirstName(scanner);
-        System.out.println(sex + " " + firstName);
+        System.out.println(sex + " " + firstName); // a enlever
         boolean wantLastName = askLastName(scanner);
-        System.out.println(sex + " " + firstName + " " + wantLastName);
+        System.out.println(sex + " " + firstName + " " + wantLastName); // a enlever
+
         scanner.close();
     }
 
@@ -21,8 +22,8 @@ public class App {
         System.out.print("Your choice:");
 
         int selection = scanner.nextInt();
-        // scanner.nextLine(); // ici on viens "annuler le enter Enter sinon ca bug dans le choose name tantot"
-        System.in.
+        scanner.nextLine(); // ici on viens "annuler le enter Enter sinon ca bug dans
+        // le choose name tantot"
 
         switch (selection) {
             case 0:
@@ -57,5 +58,10 @@ public class App {
                 System.out.println("Please choose between the two values");
                 return askLastName(scanner);
         }
+    }
+
+    public static String ChooseLastName(Scanner scanner) {
+        System.out.print("Please enter a last name : ");
+        return scanner.nextLine();
     }
 }
