@@ -8,9 +8,7 @@ public class App {
         System.out.println("Welcome to the complainer generator");
         String sex = ChooseSex(scanner);
         String firstName = ChooseFirstName(scanner);
-        System.out.println(sex + " " + firstName); // a enlever
         String lastName = ChooseLastName(scanner);
-        System.out.println(sex + " " + firstName + " " + lastName); // a enlever
         String complaint = ChooseComplaint(scanner);
         System.out.println(sex + " " + firstName + " " + lastName + " " + complaint); // a enlever
 
@@ -40,6 +38,7 @@ public class App {
 
     public static String ChooseFirstName(Scanner scanner) {
         System.out.print("Please choose a first name : ");
+
         return scanner.nextLine();
     }
 
@@ -68,6 +67,7 @@ public class App {
 
         if (complaintChosen > 10 || complaintChosen < 1) {
             System.out.println("Please choose between number 1 and 10.");
+
             return ChooseComplaint(scanner);
         }
 
