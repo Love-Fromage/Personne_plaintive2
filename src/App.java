@@ -55,7 +55,7 @@ public class App {
             return scanner.nextLine();
         }
 
-        return null;
+        return "";
     }
 
     public static String ChooseComplaint(Scanner scanner) {
@@ -89,9 +89,7 @@ public class App {
     public static void GeneratePerson(String sex, String firstName, String lastName, String complaint) {
         Person person = new Person(sex, firstName, lastName, complaint);
 
-        if (person.lastName == null) {
-            person.lastName = "";
-        } else {
+        if (person.lastName != "") {
             person.firstName += " ";
         }
 
